@@ -29,6 +29,5 @@ const students = [
   },
 ];
 
-const filteredStudents = null; // Replace null and add .filter code here
-
-console.log(filteredStudents);
+const filteredStudents = students.filter(({ mark, isOnline }) => mark >= 75 && isOnline);
+filteredStudents.forEach(({ studentName, mark, isOnline }) => console.log(studentName, mark, isOnline))
