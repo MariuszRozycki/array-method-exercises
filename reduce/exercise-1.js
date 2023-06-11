@@ -12,8 +12,17 @@ Tip: Don't forget to set the initial value to 0
 
 */
 
-const values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const total = null; // Replace null and add .reduce code here
+function sumAllValues(values) {
+  let sum = 0;
+  for (const value of values) {
+    sum = sum + value;
+  }
+  return sum;
+}
+const sum = sumAllValues(values);
 
-console.log(total);
+
+const total = values.reduce((prevValue, currValue) => prevValue += currValue);
+console.log('total', total);
