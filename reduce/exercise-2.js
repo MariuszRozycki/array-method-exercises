@@ -36,6 +36,12 @@ const items = [
   },
 ];
 
-const totalCostOfItems = null; // Replace null and add .reduce code here
+const totalCostOfItems = items.reduce((total, item) => {
+  console.log('total', total, 'itemsInStock', item.itemsInStock, 'price', item.price);
 
-console.log(totalCostOfItems);
+  total = total + item.itemsInStock * item.price;
+
+  return total;
+}, 0);
+
+console.log(totalCostOfItems.toFixed(2));
