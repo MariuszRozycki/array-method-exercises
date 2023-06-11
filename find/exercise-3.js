@@ -16,6 +16,6 @@ You will need to find a todo that has the following properties:
 */
 import { todos } from './exercise-3-data.js';
 
-const foundTodo = null; // Replace null and add .map code here
+const foundTodo = todos.find((todo) => todo.userId === 3 && todo.id === 43);
 
 console.log(foundTodo);
